@@ -75,7 +75,7 @@ var Artigiano = /** @class */ (function (_super) {
     };
     return Artigiano;
 }(Lavoratore));
-var artigiano1 = new Professionista(40000);
+var artigiano1 = new Professionista(30000);
 console.log("reddito lordo: ".concat(artigiano1.utileTasse()));
 console.log("tasse irpef: ".concat(artigiano1.getTasseIperf()));
 console.log("tasse inps: ".concat(artigiano1.getTasseInps()));
@@ -98,7 +98,7 @@ var Commerciante = /** @class */ (function (_super) {
     };
     return Commerciante;
 }(Lavoratore));
-var commerciante1 = new Professionista(40000);
+var commerciante1 = new Professionista(45000);
 console.log("reddito lordo: ".concat(commerciante1.utileTasse()));
 console.log("tasse irpef: ".concat(commerciante1.getTasseIperf()));
 console.log("tasse inps: ".concat(commerciante1.getTasseInps()));

@@ -63,7 +63,7 @@ class Artigiano extends Lavoratore{
         return this.utileTasse() - this.getTasseIperf()*0.15 - this.getTasseInps()*0.15
     }
 }
-let artigiano1 = new Professionista(40000)
+let artigiano1 = new Professionista(30000)
 console.log(`reddito lordo: ${artigiano1.utileTasse()}`)
 
 console.log(`tasse irpef: ${artigiano1.getTasseIperf()}`)
@@ -87,7 +87,7 @@ class Commerciante extends Lavoratore{
         return this.utileTasse() - this.getTasseIperf()*0.15 - this.getTasseInps()*0.35
     }
 }
-let commerciante1 = new Professionista(40000)
+let commerciante1 = new Professionista(45000)
 console.log(`reddito lordo: ${commerciante1.utileTasse()}`)
 
 console.log(`tasse irpef: ${commerciante1.getTasseIperf()}`)
