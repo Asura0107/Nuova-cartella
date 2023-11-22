@@ -42,17 +42,17 @@ var Professionista = /** @class */ (function (_super) {
         return _super.call(this, _redditoLordo) || this;
     }
     Professionista.prototype.getTasseIperf = function () {
-        return (this.utileTasse() - (this.utileTasse() * 0.05));
+        return (this.utileTasse() * 0.05);
     };
     Professionista.prototype.getTasseInps = function () {
-        return this.utileTasse() - (this.utileTasse() * 0.25);
+        return this.utileTasse() * 0.25;
     };
     Professionista.prototype.getRedditoNetto = function () {
         return this.utileTasse() - this.getTasseIperf() * 0.05 - this.getTasseInps() * 0.25;
     };
     return Professionista;
 }(Lavoratore));
-var professione1 = new Professionista(40000);
+var professione1 = new Professionista(45000);
 console.log("reddito lordo: ".concat(professione1.utileTasse()));
 console.log("tasse irpef: ".concat(professione1.getTasseIperf()));
 console.log("tasse inps: ".concat(professione1.getTasseInps()));
@@ -65,17 +65,17 @@ var Artigiano = /** @class */ (function (_super) {
         return _super.call(this, _redditoLordo) || this;
     }
     Artigiano.prototype.getTasseIperf = function () {
-        return (this.utileTasse() - (this.utileTasse() * 0.15));
+        return this.utileTasse() * 0.15;
     };
     Artigiano.prototype.getTasseInps = function () {
-        return this.utileTasse() - (this.utileTasse() * 0.15);
+        return this.utileTasse() * 0.15;
     };
     Artigiano.prototype.getRedditoNetto = function () {
         return this.utileTasse() - this.getTasseIperf() * 0.15 - this.getTasseInps() * 0.15;
     };
     return Artigiano;
 }(Lavoratore));
-var artigiano1 = new Professionista(30000);
+var artigiano1 = new Artigiano(45000);
 console.log("reddito lordo: ".concat(artigiano1.utileTasse()));
 console.log("tasse irpef: ".concat(artigiano1.getTasseIperf()));
 console.log("tasse inps: ".concat(artigiano1.getTasseInps()));
@@ -88,17 +88,17 @@ var Commerciante = /** @class */ (function (_super) {
         return _super.call(this, _redditoLordo) || this;
     }
     Commerciante.prototype.getTasseIperf = function () {
-        return (this.utileTasse() - (this.utileTasse() * 0.15));
+        return this.utileTasse() * 0.15;
     };
     Commerciante.prototype.getTasseInps = function () {
-        return this.utileTasse() - (this.utileTasse() * 0.35);
+        return this.utileTasse() * 0.35;
     };
     Commerciante.prototype.getRedditoNetto = function () {
         return this.utileTasse() - this.getTasseIperf() * 0.15 - this.getTasseInps() * 0.35;
     };
     return Commerciante;
 }(Lavoratore));
-var commerciante1 = new Professionista(45000);
+var commerciante1 = new Commerciante(45000);
 console.log("reddito lordo: ".concat(commerciante1.utileTasse()));
 console.log("tasse irpef: ".concat(commerciante1.getTasseIperf()));
 console.log("tasse inps: ".concat(commerciante1.getTasseInps()));

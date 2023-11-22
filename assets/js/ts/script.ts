@@ -31,16 +31,16 @@ class Professionista extends Lavoratore{
         super(_redditoLordo)
     }
     getTasseIperf():number {
-         return  (this.utileTasse() - (this.utileTasse()*0.05))
+         return  (this.utileTasse()*0.05)
     }
     getTasseInps() {
-        return this.utileTasse()-(this.utileTasse()*0.25)
+        return this.utileTasse()*0.25
     }
     getRedditoNetto():any{
         return this.utileTasse() - this.getTasseIperf()*0.05 - this.getTasseInps()*0.25
     }
 }
-let professione1 = new Professionista(40000)
+let professione1 = new Professionista(45000)
 console.log(`reddito lordo: ${professione1.utileTasse()}`)
 
 console.log(`tasse irpef: ${professione1.getTasseIperf()}`)
@@ -54,16 +54,16 @@ class Artigiano extends Lavoratore{
         super(_redditoLordo)
     }
     getTasseIperf():number {
-         return  (this.utileTasse() - (this.utileTasse()*0.15))
+         return  this.utileTasse()*0.15
     }
     getTasseInps() {
-        return this.utileTasse()-(this.utileTasse()*0.15)
+        return this.utileTasse()*0.15
     }
     getRedditoNetto():any{
         return this.utileTasse() - this.getTasseIperf()*0.15 - this.getTasseInps()*0.15
     }
 }
-let artigiano1 = new Professionista(30000)
+let artigiano1 = new Artigiano(45000)
 console.log(`reddito lordo: ${artigiano1.utileTasse()}`)
 
 console.log(`tasse irpef: ${artigiano1.getTasseIperf()}`)
@@ -78,16 +78,16 @@ class Commerciante extends Lavoratore{
         super(_redditoLordo)
     }
     getTasseIperf():number {
-         return  (this.utileTasse() - (this.utileTasse()*0.15))
+         return  this.utileTasse()*0.15
     }
     getTasseInps() {
-        return this.utileTasse()-(this.utileTasse()*0.35)
+        return this.utileTasse()*0.35
     }
     getRedditoNetto():any{
         return this.utileTasse() - this.getTasseIperf()*0.15 - this.getTasseInps()*0.35
     }
 }
-let commerciante1 = new Professionista(45000)
+let commerciante1 = new Commerciante(45000)
 console.log(`reddito lordo: ${commerciante1.utileTasse()}`)
 
 console.log(`tasse irpef: ${commerciante1.getTasseIperf()}`)
